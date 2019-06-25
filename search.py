@@ -41,6 +41,7 @@ def build_inverted_index(data_path, stopwords):
 				dictionary[word][filename] = 1
 			else:
 				dictionary[word][filename] += 1
+
 	return dictionary
 
 def build_indexing(inverted_index):
@@ -184,6 +185,14 @@ def computeMAP():
 				currentResultIndex = 0
 				currentReleventIndex = 0
 				self_result = self_result[:len(true_result)]
+				
+				# write file
+				with open('result/' + str(i) + '.txt', 'w') as f:
+					for item in self_result:
+						f.write("%s\n" % item)
+
+
+
 				# print("ket qua cua minh")
 				# print(self_result)
 				for doc in self_result:
@@ -201,6 +210,14 @@ def computeMAP():
 					totalPrecisionOfAllDoc += total_precision / currentReleventIndex
 			query_index += 1
 	averagePrecision = totalPrecisionOfAllDoc/len(listfilesCheck)
+
+
+	with open('precision.txt', 'w') as f:
+		json.dump(precision, f)
+	with open('recall.txt', 'w') as f:
+		json.dump(recall, f)
+	with open('MAP.txt', 'w') as f:
+		f.write("MAP:\t%s" % averagePrecision)
 	return precision, recall, averagePrecision
 
 
