@@ -222,4 +222,14 @@ def computeMAP():
 
 
 if __name__ == '__main__':
-	print(computeMAP())
+
+# bỏ cmt này để test từng câu truy vấn
+
+	# non_words = stopword("stopwords.txt")
+	# inverted_index = build_inverted_index('./Cranfield', non_words)
+	# indexing = build_indexing(inverted_index)
+
+	# thay chuỗi trong hàm queryprocess để test query khác
+	# result = queryprocess('what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft', non_words, indexing)
+	# print(result)
+	computeMAP()
