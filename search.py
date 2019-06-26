@@ -9,6 +9,10 @@ from nltk.stem import PorterStemmer
 from nltk.stem import LancasterStemmer
 from nltk.stem import WordNetLemmatizer 
 
+import nltk
+nltk.download('wordnet')
+
+
 lemmatizer = WordNetLemmatizer()
 porter = PorterStemmer()
 lancaster=LancasterStemmer()
