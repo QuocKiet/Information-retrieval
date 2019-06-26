@@ -10,7 +10,7 @@ Python 3.6.8 or any other version<br>
 
 ### Installing
   1. [Python 3.6.8](https://www.python.org/downloads/release/python-368/) <br>
-  2. Run ```pip install -r requirements.txt``` with command prompt
+  2. Run ```pip install -r requirements.txt``` with command prompt at the same directory of search.py
 
 ### How to run
   Clone this project using github <br>
